@@ -1,0 +1,689 @@
+/* Start Root and body */
+:root {
+  --main-color: #fbb633;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+/* End Root and body */
+
+/* Start Setting Box skeleton*/
+.settings-box {
+  position: fixed;
+  z-index: 5;
+  background: white;
+  width: 250px;
+  left: -250px;
+  transition: 0.4s;
+  min-height: 100%;
+  border-right: 1px solid #aaa;
+  box-sizing: border-box;
+}
+
+.settings-box.open {
+  left: 0;
+}
+
+.settings-box .settings-icon {
+  position: absolute;
+  left: 100%;
+  top: 50px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+/* End Setting Box Skeleton */
+
+/* Start Body of the settings box */
+.settings-box .settings-container .option-box h4 {
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.settings-box .settings-container .option-box ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.settings-box .settings-container .option-box {
+  background-color: #eee;
+  position: relative;
+  padding: 10px 0;
+  margin: 15px 10px;
+}
+
+.settings-box .settings-container .option-box .my-colors li {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  opacity: 0.7;
+  cursor: pointer;
+  border: 3px solid #eee;
+  box-sizing: border-box;
+}
+
+.settings-box .settings-container .option-box .my-colors li.active {
+  opacity: 1;
+  border-color: white;
+  box-sizing: border-box;
+}
+
+.settings-box .settings-container .option-box .my-colors li:first-child {
+  background-color: #dfa12a;
+}
+.settings-box .settings-container .option-box .my-colors li:nth-child(2) {
+  background-color: #3eb5a4;
+}
+.settings-box .settings-container .option-box .my-colors li:nth-child(3) {
+  background-color: #eb6e81;
+}
+.settings-box .settings-container .option-box .my-colors li:nth-child(4) {
+  background-color: #338841;
+}
+.settings-box .settings-container .option-box .my-colors li:last-child {
+  background-color: #df5ed2;
+}
+.settings-box .settings-container .option-box .random {
+  padding-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  height: 80px;
+}
+
+.settings-box .settings-container .option-box .random li {
+  position: relative;
+  min-width: 45%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 7;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.settings-box .settings-container .option-box .random li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  border-radius: 8px;
+  background-color: var(--main-color);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.settings-box .settings-container .option-box .random li.active::before {
+  opacity: 1;
+}
+
+.settings-box .settings-container .option-box .random li.active {
+  font-weight: bold;
+  color: #fff;
+}
+/* End Body of the settings box */
+
+/* Start Landing Page Skeleton */
+.landing-page {
+  background-image: url(../imgs/1.jpg);
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+}
+
+.landing-page .overlay {
+  position: absolute;
+  z-index: 2;
+  background-color: #000000;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* End Landing Page Skeleton */
+
+/* Start Landing Page Body */
+
+.landing-page .header-area {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 0 0 0;
+  box-sizing: border-box;
+}
+
+.landing-page .header-area .logo {
+  font-weight: 700;
+}
+
+.landing-page .header-area ul {
+  padding: 0;
+  margin: 0;
+}
+
+.landing-page .header-area ul li {
+  display: inline-block;
+}
+
+.landing-page .header-area ul li a {
+  color: inherit;
+  text-decoration: inherit;
+  padding: 0 5 px;
+}
+
+.landing-page .header-area ul li a.active {
+  color: var(--main-color);
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.landing-page .introduction-text {
+  position: absolute;
+  z-index: 3;
+  color: #fff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 60%;
+}
+
+.landing-page .introduction-text h1 {
+  font-size: 38px;
+  margin: 0;
+}
+
+.landing-page .introduction-text p {
+  font-size: 18px;
+  line-height: 1.8em;
+}
+
+.landing-page .introduction-text span {
+  color: var(--main-color);
+}
+
+/* End Landing Page Body */
+
+/* Start About Us */
+.about-us {
+  display: flex;
+  padding: 40px 0;
+}
+
+.about-us .info-box {
+  flex: 1;
+}
+
+.about-us .info-box h2 {
+  flex: 1;
+  font-weight: 900;
+  font-size: 30px;
+  margin: 0 0 20px;
+  color: var(--main-color);
+}
+
+.about-us .info-box p {
+  line-height: 2em;
+  margin: 0;
+  padding-right: 15px;
+  color: #777;
+}
+
+.about-us .image-box {
+  flex: 1;
+  text-align: center;
+}
+
+.about-us .image-box img {
+  width: 260px;
+}
+
+/* End About Us */
+
+/* Start Our Skills */
+.skills {
+  padding: 40px 0;
+  background-color: #eee;
+}
+
+.skills h2 {
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 20px;
+  color: var(--main-color);
+}
+
+.skills .skill-box {
+  display: flex;
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 19px;
+}
+
+.skills .skill-name {
+  font-weight: 700;
+  width: 105px;
+  text-align: right;
+  /*عملناها 30 بكسل علشان نوسطها رأسيا لأن ارتفاع ال skill-progress 30 بكسل*/
+  line-height: 30px;
+  position: relative;
+  padding-right: 10px;
+}
+
+.skills .skill-progress {
+  height: 30px;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 7px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills .skill-progress span {
+  position: absolute;
+  background-color: var(--main-color);
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  transition: width 0.8s;
+}
+/* End Our Skills */
+/* Start Gallery */
+.gallery {
+  padding: 40px 0;
+}
+
+.gallery h2 {
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 20px;
+  color: var(--main-color);
+}
+
+.gallery .images-box {
+  text-align: center;
+}
+
+.gallery .images-box img {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 3px;
+  margin: 5px;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+div.layer {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+/*شوف هنوسطه في الشاشة من خلال top, left, transform*/
+/*شوف هنوسط الصورة فيه من خلال الـ padding*/
+/*فيه سؤال منطقي، الطول والعرض بتوع  ال popup box اتحددوا بناء على ايه*/
+/* الجواب هو أني لما وسطت العنصر من خلالtop,left:50% ...  تلقائيا بيكون الطول والعرض يساوي 50%*/
+div.popup {
+  padding: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  position: fixed;
+  z-index: 60;
+  background-color: #fff;
+  width: 60%;
+}
+
+div.popup h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  color: var(--main-color);
+}
+
+div.popup img {
+  width: 100%;
+}
+
+div.popup span.closing {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* End Gallery */
+/* Start Timeline */
+.timeline {
+  background-color: #eee;
+  padding: 40px 0;
+}
+
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline .timeline-content::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  background-color: var(--main-color);
+}
+
+.timeline .timeline-content .year {
+  width: 50px;
+  margin: 20px auto auto;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+}
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+  width: calc(50% - 22px);
+  margin-bottom: 30px;
+}
+
+.timeline .timeline-content .left {
+  float: left;
+}
+
+.timeline .timeline-content .right {
+  float: right;
+}
+
+.timeline .timeline-content .content {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  margin: 26px 0 -10px;
+  position: relative;
+}
+.timeline .timeline-content .content h3 {
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.timeline .timeline-content .content p {
+  color: #666;
+  line-height: 1.5em;
+}
+div.clear {
+  clear: both;
+}
+.timeline .timeline-content .left .content::before,
+.timeline .timeline-content .right .content::before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 30px;
+}
+
+.timeline .timeline-content .left .content::before {
+  right: -20px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.timeline .timeline-content .right .content::before {
+  left: -20px;
+  border-color: transparent #fff transparent transparent;
+}
+
+.timeline .timeline-content .left .content::after,
+.timeline .timeline-content .right .content::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  box-sizing: border-box;
+}
+.timeline .timeline-content .right .content::after {
+  left: -32px;
+}
+.timeline .timeline-content .left .content::after {
+  right: -32px;
+}
+/* End Timeline */
+/* Start Features */
+.features {
+  padding: 40px 0;
+}
+
+.features h2 {
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 20px;
+  color: var(--main-color);
+}
+
+.features .feat-box {
+  width: calc((100% / 3));
+  float: left;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.features .feat-box div:first-child {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+
+.features .feat-box img {
+  max-width: 100%;
+}
+
+.features .feat-box h4 {
+  font-weight: bold;
+  margin: 21px 0 35px;
+  position: relative;
+}
+
+.features .feat-box h4::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: var(--main-color);
+  bottom: -15px;
+  left: 50%;
+  margin-left: -20px;
+}
+
+.features .feat-box p {
+  line-height: 1.8em;
+  color: #666;
+  width: 90%;
+  margin: auto;
+}
+/* End Features */
+/* Start Testimonials */
+.testimonials {
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: "";
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--main-color);
+  height: 100%;
+}
+
+.testimonials::after {
+  content: "";
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  height: 100%;
+}
+
+.testimonials h2 {
+  position: relative;
+  z-index: 2;
+  font-weight: 900;
+  font-size: 30px;
+  margin: 0 0 20px;
+  color: #fff;
+}
+
+.testimonials .ts-box {
+  width: calc(98% / 3);
+  position: relative;
+  z-index: 2;
+  float: left;
+  background-color: #fff;
+}
+.testimonials .ts-box:not(:last-of-type) {
+  margin-right: 1%;
+}
+
+.testimonials .ts-box > p {
+  padding: 0 11px;
+  font-style: italic;
+  font-size: 17px;
+  font-family: auto;
+  line-height: 1.4em;
+}
+.testimonials .ts-box .person-info {
+  overflow: hidden;
+  padding-bottom: 18px;
+}
+
+.testimonials .ts-box img {
+  padding: 0 10px;
+  float: left;
+  border-radius: 50%;
+}
+.testimonials .ts-box .person {
+  float: left;
+  height: 80px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials .ts-box .person h4 {
+  margin: 0 0 20px;
+}
+
+.testimonials .ts-box .person p {
+  margin: 0;
+}
+
+/* End Testimonials */
+/* Start navigation buttons */
+.nav-bullets {
+  position: fixed;
+  z-index: 5;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 50px;
+}
+
+.nav-bullets .bullet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid var(--main-color);
+  background-color: #fff;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: 10px auto;
+  position: relative;
+}
+
+.nav-bullets .bullet:hover .tooltip {
+  display: block;
+}
+
+.nav-bullets .bullet .tooltip {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 7px 12px;
+  width: 90px;
+  right: 40px;
+  top: -7px;
+  position: absolute;
+  display: none;
+  cursor: default;
+  text-align: right;
+  /*مش فاهم كتبنا ليه none*/
+  /*لكن الملاحظ أن لما باحاول انتقل من الدايرة للكلمة مش باعرف.. يعني الكلمة بتختفي.. ليه معرفش*/
+  pointer-events: none;
+}
+
+.nav-bullets .bullet .tooltip::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--main-color);
+  right: -21px;
+  border-width: 11px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+/* End navigation buttons */
